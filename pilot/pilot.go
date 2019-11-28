@@ -628,6 +628,8 @@ func (p *Pilot) parseLogConfig(name string, info *LogInfoNode, jsonLogPath strin
 		Target:       target,
 	}
 
+	log.Errorf("config = %v", cfg)
+
 	if formatConfig["time_key"] == "" {
 		cfg.EstimateTime = true
 		cfg.FormatConfig["time_key"] = "_timestamp"
