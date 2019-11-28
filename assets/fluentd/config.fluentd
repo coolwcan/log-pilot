@@ -24,6 +24,8 @@ echo "@include conf.d/*.conf" >> $FLUENTD_CONFIG
 
 bufferd_output(){
 cat << EOF
+<buffer>
+@type memory
 ${FLUENTD_BUFFER_TYPE:+buffer_type $FLUENTD_BUFFER_TYPE}
 ${FLUENTD_BUFFER_CHUNK_LIMIT:+buffer_chunk_limit $FLUENTD_BUFFER_CHUNK_LIMIT}
 ${FLUENTD_BUFFER_QUEUE_LIMIT:+buffer_queue_limit $FLUENTD_BUFFER_QUEUE_LIMIT}
@@ -40,6 +42,8 @@ ${FLUENTD_RETRY_LIMIT:+retry_limit $FLUENTD_RETRY_LIMIT}
 ${FLUENTD_RETRY_WAIT:+retry_wait $FLUENTD_RETRY_WAIT}
 ${FLUENTD_MAX_RETRY_WAIT:+max_retry_wait $FLUENTD_MAX_RETRY_WAIT}
 ${FLUENTD_NUM_THREADS:+num_threads $FLUENTD_NUM_THREADS}
+overflow_action block
+</buffer>
 EOF
 }
 
