@@ -1,3 +1,4 @@
+github.com/Microsoft/go-winio v0.4.12 h1:xAfWHN1IrQ0NJ9TBC0KBZoqLjzDTr1ML+4MywiUOryc=
 github.com/Microsoft/go-winio v0.4.12/go.mod h1:VhR8bwka0BXejwEJY73c50VrPtXAaKcyvVC4A4RozmA=
 github.com/Sirupsen/logrus v1.0.1-0.20170630005420-7dd06bf38e1e h1:+Ea/O3a1agit+a8B9SjvHb/vn6vLiglBNsLjNyqDAUA=
 github.com/Sirupsen/logrus v1.0.1-0.20170630005420-7dd06bf38e1e/go.mod h1:rmk17hk6i8ZSAJkSDa7nOxamrG+SP4P0mm+DAvExv4U=
