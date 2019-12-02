@@ -352,15 +352,15 @@ func (p *Pilot) newContainer(containerJSON *types.ContainerJSON) error {
 
 	for _, e := range env {
 		for _, prefix := range p.logPrefix {
-			serviceLogs := fmt.Sprintf(LABEL_SERVICE_LOGS_TEMPL, prefix)
+			serviceLogs := fmt.Sprintf(ENV_SERVICE_LOGS_TEMPL, prefix)
 			if !strings.HasPrefix(e, serviceLogs) {
 				continue
 			}
 
 			envLabel := strings.SplitN(e, "=", 2)
 			if len(envLabel) == 2 {
-				//labelKey := strings.Replace(envLabel[0], "_", ".", -1)
-				labelKey := envLabel[0]
+				labelKey := strings.Replace(envLabel[0], "_", ".", -1)
+				//labelKey := envLabel[0]
 				labels[labelKey] = envLabel[1]
 			}
 		}
