@@ -352,7 +352,7 @@ func (p *Pilot) newContainer(containerJSON *types.ContainerJSON) error {
 
 	for _, e := range env {
 		for _, prefix := range p.logPrefix {
-			serviceLogs := fmt.Sprintf(ENV_SERVICE_LOGS_TEMPL, prefix)
+			serviceLogs := fmt.Sprintf(LABEL_SERVICE_LOGS_TEMPL, prefix)
 			if !strings.HasPrefix(e, serviceLogs) {
 				continue
 			}

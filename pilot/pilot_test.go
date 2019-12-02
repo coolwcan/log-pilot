@@ -1,6 +1,7 @@
 package pilot
 
 import (
+	"encoding/json"
 	log "github.com/Sirupsen/logrus"
 	"github.com/docker/docker/api/types"
 	"gopkg.in/check.v1"
@@ -17,6 +18,22 @@ func Test(t *testing.T) {
 type PilotSuite struct{}
 
 var _ = check.Suite(&PilotSuite{})
+
+func (p *PilotSuite) TestParseConfigs(c *check.C) {
+	pilot := &Pilot{
+		logPrefix: []string{"aliyun"},
+	}
+
+	file, err := os.Open("/Users/wangcan/Desktop/json.log")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var response types.ContainerJSON
+	err = json.NewDecoder(file).Decode(&response)
+	file.Close()
+	pilot.newContainer(&response)
+}
 
 func (p *PilotSuite) TestGetLogConfigs(c *check.C) {
 	pilot := &Pilot{
