@@ -359,7 +359,8 @@ func (p *Pilot) newContainer(containerJSON *types.ContainerJSON) error {
 
 			envLabel := strings.SplitN(e, "=", 2)
 			if len(envLabel) == 2 {
-				labelKey := strings.Replace(envLabel[0], "_", ".", -1)
+				//labelKey := strings.Replace(envLabel[0], "_", ".", -1)
+				labelKey := envLabel[0]
 				labels[labelKey] = envLabel[1]
 			}
 		}
