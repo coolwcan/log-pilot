@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"github.com/coolwcan/log-pilot/pilot"
+	"log-pilot/pilot"
 	log "github.com/Sirupsen/logrus"
 	"io/ioutil"
 	"os"

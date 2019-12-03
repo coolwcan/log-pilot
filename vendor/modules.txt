@@ -2,8 +2,6 @@
 github.com/Microsoft/go-winio
 # github.com/Sirupsen/logrus v1.0.1-0.20170630005420-7dd06bf38e1e
 github.com/Sirupsen/logrus
-# github.com/coolwcan/log-pilot v0.9.7
-github.com/coolwcan/log-pilot/pilot
 # github.com/docker/distribution v2.6.0-rc.1.0.20170726174610-edc3ab29cdff+incompatible
 github.com/docker/distribution/digestset
 github.com/docker/distribution/reference

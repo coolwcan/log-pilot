@@ -5,7 +5,7 @@ go 1.13
 require (
 	github.com/Microsoft/go-winio v0.4.12 // indirect
 	github.com/Sirupsen/logrus v1.0.1-0.20170630005420-7dd06bf38e1e
-	github.com/coolwcan/log-pilot v0.9.7
+	github.com/coolwcan/log-pilot v0.9.7 // indirect
 	github.com/docker/distribution v2.6.0-rc.1.0.20170726174610-edc3ab29cdff+incompatible // indirect
 	github.com/docker/docker v1.13.1
 	github.com/docker/go-connections v0.3.0 // indirect
