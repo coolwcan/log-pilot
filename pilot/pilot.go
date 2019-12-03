@@ -357,9 +357,11 @@ func (p *Pilot) newContainer(containerJSON *types.ContainerJSON) error {
 				continue
 			}
 
+			labelPrefix := fmt.Sprintf(LABEL_SERVICE_LOGS_TEMPL, prefix)
+
 			envLabel := strings.SplitN(e, "=", 2)
 			if len(envLabel) == 2 {
-				labelKey := strings.Trim(envLabel[0], serviceLogs)
+				labelKey := strings.Replace(envLabel[0], serviceLogs, labelPrefix, 1)
 				labels[labelKey] = envLabel[1]
 			}
 		}
