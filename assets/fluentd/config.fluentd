@@ -208,8 +208,8 @@ ${KAFKA_DISCARD_KAFKA_DELIVERY_FAILED:+discard_kafka_delivery_failed $KAFKA_DISC
   @type json
 </format>
 <inject>
-  time_key timstamp
-  time_type unixtime
+  time_key timestamp
+  time_type float
 </inject>
 $(bufferd_output)
 </match>
