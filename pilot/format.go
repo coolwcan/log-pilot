@@ -45,12 +45,8 @@ func init() {
 		}
 	}
 
-	Register("nonex", simpleConverter([]string{}))
-	Register("csv", simpleConverter([]string{"time_key", "time_format", "keys"}))
-	Register("json", simpleConverter([]string{"time_key", "time_type", "timezone", "time_format"}))
-	Register("apache2", simpleConverter([]string{}))
-	Register("apache_error", simpleConverter([]string{}))
-	Register("nginx", simpleConverter([]string{}))
+	Register("nonex", simpleConverter([]string{"message_key"}))
+	Register("json", simpleConverter([]string{"time_key", "time_type", "timezone", "time_format", "types"}))
 	Register("regexp", func(info *LogInfoNode) (map[string]string, error) {
 		ret, err := simpleConverter([]string{"pattern", "time_key", "time_type", "timezone", "time_format", "types"})(info)
 		if err != nil {
